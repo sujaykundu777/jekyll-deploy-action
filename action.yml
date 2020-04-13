@@ -1,6 +1,10 @@
 # Ok, here the keys are pretty much self explanatory :)
-name: 'Deploy new version'
-description: 'Setup Ruby env and build new site version'
+name: 'Deploy Jekyll'
+description: 'Build and deploy jekyll site to Github Pages'
+iconName: 'box'
+categories: 
+      - jekyll 
+      - github
 author: 'Sujay Kundu'
 runs:
   using: 'docker'
