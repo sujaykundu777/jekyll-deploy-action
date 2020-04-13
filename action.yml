@@ -1,5 +1,5 @@
 # Ok, here the keys are pretty much self explanatory :)
-name: 'Deploy Jekyll'
+name: 'Deploy Jekyll Site'
 description: 'Build and deploy jekyll site to Github Pages'
 iconName: check
 categories: 
