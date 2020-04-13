@@ -1,11 +1,17 @@
 # jekyll-deploy
 A Github Action to build and deploy Jekyll site to Github Pages
 
-The Action will build a production build of your jekyll site in gh-pages branch on every push.
+The Action will build a production build of your jekyll site in gh-pages branch on every push. Very helpful, when you want to use jekyll plugins which are not supported by Github Pages Yet.
 
 ### Example usage
 
-Put the following inside **yourproject/.github/workflows/main.yml**
+You need to set build folder as God demands, add the following in your site's **_config.yml** :
+
+```yml
+destination: ./build
+```
+
+And, put the following inside **yourjekyllsite/.github/workflows/main.yml**
 
 ```yml
 name: Jekyll Deploy
@@ -27,5 +33,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
         GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
-
 ```
