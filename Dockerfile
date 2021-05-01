@@ -2,11 +2,11 @@
 # it is a very light docker image.
 FROM ruby:2-slim
 LABEL author="Sujay Kundu"
-LABEL version="1.0.1"
+LABEL version="1.0.2"
 
 # Lets install all dependencies
-# including git and Bundler 2.2.6 from 2.1.4
-ENV BUNDLER_VERSION 2.2.6
+# including git and Bundler 2.2.16 from 2.2.6
+ENV BUNDLER_VERSION 2.2.16
 RUN apt-get update && \
     apt-get install --no-install-recommends -y \
     bats \
@@ -18,7 +18,7 @@ RUN apt-get update && \
     shellcheck \
     libffi6 \
     git-all \
-    && gem install bundler:2.2.6 \
+    && gem install bundler:2.2.16 \
     && bundle config --global silence_root_warning 1
 
 # This is our entrypoint to our custom scripts
