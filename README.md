@@ -28,9 +28,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Deploy Jekyll Site
-      uses: sujaykundu777/jekyll-deploy-action@1.0.3
+      uses: sujaykundu777/jekyll-deploy-action@1.0.4
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
