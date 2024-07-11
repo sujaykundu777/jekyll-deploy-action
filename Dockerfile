@@ -1,8 +1,8 @@
 # Our Docker image will be based on ruby:2-slim
 # it is a very light docker image.
-FROM ruby:2-slim
+FROM ruby:3.3.4-slim
 LABEL author="Sujay Kundu"
-LABEL version="1.0.4"
+LABEL version="1.0.5"
 
 # Lets install all dependencies
 # including git and Bundler 2.5.14
@@ -19,7 +19,8 @@ RUN apt-get update && \
     libffi7 \
     git-all \
     && gem install bundler:2.5.14 \
-    && bundle config --global silence_root_warning 1
+    && bundle config --global silence_root_warning 1 \
+    && apt-get clean
 
 # This is our entrypoint to our custom scripts
 # more about that in a sec
